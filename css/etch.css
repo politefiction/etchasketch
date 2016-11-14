@@ -1,0 +1,37 @@
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #D2D3D4;
+}
+
+ul {
+	list-style: none;
+}
+
+table {
+	border: 1px solid black;
+}
+
+h1 {
+	text-align: center;
+	border: 1px solid black;
+}
+
+.menu {
+	width: 150px;
+	border: 1px solid black;
+}
+
+.menu li {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	margin: 25px 0px;
+	padding: 10px;
+	border: 1px solid white;
+	background-color: #92B388;
+}
+
+.container {
+	margin-left: 175px;
+	border: 1px solid red;
+}

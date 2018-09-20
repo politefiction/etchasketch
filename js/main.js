@@ -5,7 +5,6 @@ window.onload = function() {
 	container.setAttribute('style', `width: ${origWidth}px; height: ${origHeight}px`);
 
 //Starting grid
-	let test3 = "Can you see me? ";
 	let defaultGrid = (origWidth * origHeight)/Math.pow(35, 2);
 	function makeGrid(gridSize) {
 		for(i=0; i < gridSize; i++) {

@@ -1,39 +1,52 @@
 html {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: #D2D3D4;
 }
 
 ul {
 	list-style: none;
 }
 
-table {
-	border: 1px solid black;
+#main-container {
+	height: auto;
+	width: auto;
+	display: inline-table;
 }
 
-h1 {
-	text-align: center;
-	border: 1px solid black;
+#main-container div {
+	display: inline-block;
+	position: relative;
 }
 
-.menu {
+h2 {
+	position: relative;
+}
+
+#menu {
 	width: 150px;
-	border: 1px solid black;
+	float: left;
+	top: 15em;
+	margin-right: 10px;
 }
 
-.menu li {
+#menu li {
 	color: white;
 	font-weight: bold;
 	text-align: center;
-	margin: 25px 0px;
+	margin: 25px 10px 25px -25px;
 	padding: 10px;
 	border: 1px solid white;
 	background-color: #92B388;
 }
 
-.container {
-	margin: 5px 25px;
-	border: 1px solid red;
+#grid-container {
+	width: 975px;
+	border: 1px solid green;
+	left: 5em;
+	background-color: #92B388;
+}
+
+#grid {
+	margin-top: -13px;
 }
 
 .square {

@@ -1,15 +1,15 @@
 window.onload = function() {
-	let origWidth = 560;
-	let origHeight = 560;
-	let container = document.querySelector(".container")
-	container.setAttribute('style', `width: ${origWidth}px; height: ${origHeight}px`);
+	let ctnWidth = 900;
+	let ctnHeight = 900;
+	let container = document.querySelector("#grid")
+	container.setAttribute('style', `width: ${ctnWidth}px; height: ${ctnHeight}px`);
 
 //Starting grid
-	let defaultGrid = (origWidth * origHeight)/Math.pow(35, 2);
+	let defaultGrid = 900;
 	function makeGrid(gridSize) {
 		for(i=0; i < gridSize; i++) {
 			let square = document.createElement('div');
-			square.setAttribute('class', 'square');
+			square.setAttribute('style', `width: ${Math.sqrt((ctnWidth * ctnHeight)/gridSize)}; height: ${Math.sqrt((ctnWidth * ctnHeight)/gridSize)}; background-color: white`);
 			square.appendChild(document.createElement('li'));
 			container.appendChild(square);
 			square.addEventListener("mouseenter", function() {
@@ -23,20 +23,17 @@ window.onload = function() {
 // Make a new grid
 	let newGridStart = document.querySelector('#new-grid');
 	newGridStart.onclick = function() {
-		let gridWidth = prompt("Grid width:");
-		let gridHeight = prompt("Grid height:");
-		if (isNaN(gridWidth) === true || isNaN(gridHeight) === true) {
-			alert("Grid width and height must be numbers! Please try again.")
+		let rowSquares = prompt("Squares per row:");
+		let colSquares = prompt("Squares per column");
+		if (isNaN(rowSquares) === true || isNaN(colSquares) === true) {
+			alert("Row and column entries must be numbers! Please try again.")
 		} else {
-			let test1 = gridWidth * 35;
-			let test2 = gridHeight * 35;
-			let newGrid = (test1 * test2)/Math.pow(35, 2);
+			let newGrid = rowSquares * colSquares;
 			container.querySelectorAll('div').forEach(div => 
 				container.removeChild(div)
 			);
-			container.setAttribute('style', `width: ${test1}px; height: ${test2}px`);
 			makeGrid(newGrid);
-			alert("Current Grid Area: " + newGrid);
+			alert(`Current Grid Area: ${rowSquares} x ${colSquares}`);
 		}; 
 	};
 
